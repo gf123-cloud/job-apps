@@ -1,226 +1,265 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{{CANDIDATE_NAME}} — {{TARGET_ROLE}} | {{COMPANY_NAME}}</title>
-  <meta name="description" content="Job-specific application page for {{COMPANY_NAME}} — {{TARGET_ROLE}}." />
-  <meta name="robots" content="noindex,nofollow" />
-
-  <!-- Tailwind CDN (simple + consistent for your generator) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    /* small modern polish without framework dependency */
-    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cover Letter Template</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+      }
+    </style>
 </head>
+<body class="bg-slate-50 min-h-screen py-0 md:py-12">
 
-<body class="min-h-screen bg-slate-950 text-slate-100">
-  <!-- Background -->
-  <div class="fixed inset-0 -z-10">
-    <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900"></div>
-    <div class="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-indigo-600/20 blur-3xl"></div>
-    <div class="absolute -bottom-48 right-0 h-[520px] w-[520px] rounded-full bg-cyan-500/10 blur-3xl"></div>
-  </div>
+    <div class="bg-white max-w-5xl mx-auto shadow-2xl overflow-hidden font-sans text-slate-800 md:rounded-2xl border border-slate-100">
+      
+      <!-- Header Section -->
+      <header class="gradient-bg text-white p-8 md:p-14 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500 rounded-full mix-blend-overlay filter blur-[64px] opacity-30 -translate-y-1/2 translate-x-1/4"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-fuchsia-500 rounded-full mix-blend-overlay filter blur-[64px] opacity-20 translate-y-1/3 -translate-x-1/4"></div>
 
-  <!-- Sticky header -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/60 glass">
-    <div class="mx-auto max-w-6xl px-4 py-4 md:px-6">
-      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <div class="min-w-0">
-          <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-            <h1 class="text-lg font-semibold tracking-tight">{{CANDIDATE_NAME}}</h1>
-            <span class="text-slate-400">•</span>
-            <p class="text-slate-300 truncate">{{TARGET_ROLE}}</p>
-            <span class="text-slate-400 hidden sm:inline">•</span>
-            <p class="text-slate-400 hidden sm:block truncate">{{COMPANY_NAME}}</p>
-          </div>
-          <p class="text-xs text-slate-400 mt-1">
-            {{LOCATION}} · {{WORK_AUTH}} · {{WORK_PREF}}
-          </p>
-        </div>
-
-        <nav class="flex flex-wrap items-center gap-2 text-sm">
-          <a class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 hover:bg-white/10" href="mailto:{{EMAIL}}">Email</a>
-          <a class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 hover:bg-white/10" href="{{LINKEDIN_URL}}" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 hover:bg-white/10" href="{{PORTFOLIO_URL}}" target="_blank" rel="noreferrer">Portfolio</a>
-          <a class="rounded-full border border-white/10 bg-indigo-500/20 px-3 py-1.5 hover:bg-indigo-500/30" href="{{RESUME_PDF_URL}}" target="_blank" rel="noreferrer">PDF Resume</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main class="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-14">
-    <!-- Hero -->
-    <section class="grid gap-6 md:grid-cols-12 md:items-start">
-      <div class="md:col-span-8">
-        <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
-          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-          Tailored to {{COMPANY_NAME}} · {{TARGET_ROLE}}
-        </p>
-
-        <h2 class="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-          {{HERO_HEADLINE}}
-        </h2>
-
-        <p class="mt-4 text-slate-300 leading-relaxed">
-          {{HERO_SUMMARY}}
-        </p>
-
-        <ul class="mt-6 space-y-2">
-          <!-- Keep these to 3 bullets, outcomes only -->
-          <li class="flex gap-3">
-            <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-indigo-400"></span>
-            <span class="text-slate-200">{{PROOF_BULLET_1}}</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-indigo-400"></span>
-            <span class="text-slate-200">{{PROOF_BULLET_2}}</span>
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-indigo-400"></span>
-            <span class="text-slate-200">{{PROOF_BULLET_3}}</span>
-          </li>
-        </ul>
-
-        <div class="mt-6 flex flex-wrap gap-2 text-xs">
-          <!-- 6–10 tags max -->
-          {{TOOL_TAGS_HTML}}
-        </div>
-      </div>
-
-      <!-- Quick facts card -->
-      <aside class="md:col-span-4">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-          <h3 class="text-sm font-semibold text-slate-200">Quick fit</h3>
-          <div class="mt-4 space-y-3 text-sm text-slate-300">
-            <div class="flex items-center justify-between gap-4">
-              <span class="text-slate-400">Focus</span>
-              <span class="text-slate-200 text-right">{{FOCUS_AREAS}}</span>
+        <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-indigo-100 text-xs font-semibold uppercase tracking-wider mb-4">
+              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              Open to Work
             </div>
-            <div class="flex items-center justify-between gap-4">
-              <span class="text-slate-400">Stack</span>
-              <span class="text-slate-200 text-right">{{STACK_HIGHLIGHT}}</span>
-            </div>
-            <div class="flex items-center justify-between gap-4">
-              <span class="text-slate-400">Availability</span>
-              <span class="text-slate-200 text-right">{{AVAILABILITY}}</span>
-            </div>
-          </div>
-
-          <div class="mt-5">
-            <a class="block w-full rounded-xl bg-indigo-500 px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-indigo-400"
-               href="mailto:{{EMAIL}}?subject={{EMAIL_SUBJECT_ENCODED}}">
-              Contact
-            </a>
-            <p class="mt-2 text-xs text-slate-400">
-              Prefer async? Email is best.
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-3 leading-tight">{{FULL_NAME}}</h1>
+            <p class="text-indigo-100 text-xl font-medium tracking-wide flex items-center gap-2">
+              {{JOB_TITLE}} <span class="text-indigo-400">@</span> {{COMPANY_NAME}}
             </p>
           </div>
-        </div>
-      </aside>
-    </section>
-
-    <!-- Requirements ↔ Evidence table -->
-    <section class="mt-12">
-      <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-        <div>
-          <h3 class="text-xl font-semibold tracking-tight">Requirements ↔ Evidence</h3>
-          <p class="mt-1 text-sm text-slate-400">
-            Left side is what you asked for. Right side is what I’ve done, with proof.
-          </p>
-        </div>
-        <p class="text-xs text-slate-500">
-          Updated: {{GENERATED_DATE}}
-        </p>
-      </div>
-
-      <div class="mt-5 overflow-hidden rounded-2xl border border-white/10">
-        <div class="overflow-x-auto">
-          <table class="min-w-full divide-y divide-white/10">
-            <thead class="bg-white/5">
-              <tr>
-                <th class="px-4 py-3 text-left text-xs font-semibold text-slate-300 w-[45%]">What you need</th>
-                <th class="px-4 py-3 text-left text-xs font-semibold text-slate-300 w-[55%]">My match (evidence)</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/10 bg-slate-950/20">
-              <!-- Repeat 8–12 rows -->
-              {{REQUIREMENTS_TABLE_ROWS_HTML}}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <p class="mt-3 text-xs text-slate-500">
-        Note: Claims on this page should be backed by the attached PDF resume and interview-ready details.
-      </p>
-    </section>
-
-    <!-- Proof cards (3) -->
-    <section class="mt-12">
-      <h3 class="text-xl font-semibold tracking-tight">Selected proof</h3>
-      <p class="mt-1 text-sm text-slate-400">Three examples aligned to the requirements above.</p>
-
-      <div class="mt-5 grid gap-4 md:grid-cols-3">
-        {{PROOF_CARDS_HTML}}
-      </div>
-    </section>
-
-    <!-- Relevant experience (compressed) -->
-    <section class="mt-12">
-      <h3 class="text-xl font-semibold tracking-tight">Relevant experience</h3>
-      <div class="mt-5 grid gap-4">
-        {{EXPERIENCE_BLOCKS_HTML}}
-      </div>
-    </section>
-
-    <!-- Toolbox -->
-    <section class="mt-12">
-      <h3 class="text-xl font-semibold tracking-tight">Toolbox</h3>
-      <p class="mt-1 text-sm text-slate-400">Only tools I can defend with real outcomes.</p>
-
-      <div class="mt-5 grid gap-4 md:grid-cols-2">
-        {{TOOLBOX_GRID_HTML}}
-      </div>
-    </section>
-
-    <!-- Optional: 30/60/90 plan -->
-    <section class="mt-12">
-      <h3 class="text-xl font-semibold tracking-tight">30 / 60 / 90</h3>
-      <p class="mt-1 text-sm text-slate-400">A realistic plan mapped to your priorities.</p>
-
-      <div class="mt-5 grid gap-4 md:grid-cols-3">
-        {{PLAN_30_60_90_HTML}}
-      </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="mt-12">
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
-            <h3 class="text-lg font-semibold">If you want me to solve {{PRIMARY_JOB_PAIN}}, let’s talk.</h3>
-            <p class="mt-1 text-sm text-slate-400">{{CTA_SUPPORTING_LINE}}</p>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <a class="rounded-xl bg-indigo-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-indigo-400"
-               href="mailto:{{EMAIL}}?subject={{EMAIL_SUBJECT_ENCODED}}">
-              Email me
-            </a>
-            <a class="rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-semibold text-slate-200 hover:bg-white/10"
-               href="{{CALENDAR_URL}}" target="_blank" rel="noreferrer">
-              Book 15 min
-            </a>
+          
+          <div class="flex flex-col gap-3 text-sm text-indigo-100/90 bg-white/5 p-5 rounded-xl backdrop-blur-sm border border-white/10">
+            <div class="flex items-center gap-3">
+              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <a href="mailto:{{EMAIL_ADDRESS}}" class="hover:text-white transition-colors font-medium">{{EMAIL_ADDRESS}}</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <a href="tel:{{PHONE_NUMBER}}" class="hover:text-white transition-colors font-medium">{{PHONE_NUMBER}}</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <span class="font-medium">{{CITY_STATE}}</span>
+            </div>
+            <div class="flex gap-3 mt-1 pt-3 border-t border-white/10">
+              <a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-indigo-200 hover:text-white transition-colors text-xs uppercase font-bold tracking-wider">
+                <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+              </a>
+              <a href="{{PORTFOLIO_URL}}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-indigo-200 hover:text-white transition-colors text-xs uppercase font-bold tracking-wider">
+                <i data-lucide="globe" class="w-4 h-4"></i> Portfolio
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
-      <p class="mt-6 text-center text-xs text-slate-500">
-        © {{YEAR}} {{CANDIDATE_NAME}} · Generated for {{COMPANY_NAME}} · {{TARGET_ROLE}}
-      </p>
-    </section>
-  </main>
+      <main class="p-8 md:p-16 space-y-16">
+        <!-- Hero / Intro Section -->
+        <section class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+                Why I am the missing piece for your <span class="gradient-text">{{JOB_TITLE}}</span> role.
+            </h2>
+            <div class="h-1 w-24 bg-indigo-600 mx-auto rounded-full opacity-20"></div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-gradient-to-r from-slate-50 to-white border border-slate-200 p-8 md:p-10 rounded-2xl shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-indigo-600"></div>
+          <div class="flex items-start gap-4">
+             <i data-lucide="quote" class="w-8 h-8 text-indigo-200 fill-indigo-100 flex-shrink-0"></i>
+             <div>
+                <h3 class="text-lg font-bold text-slate-900 uppercase tracking-wide mb-3">Executive Summary</h3>
+                <p class="text-lg md:text-xl text-slate-700 leading-relaxed font-medium">{{SHORT_SUMMARY}}</p>
+             </div>
+          </div>
+        </section>
+
+        <!-- The "Why Me" Table -->
+        <section>
+          <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
+            <div>
+                <h3 class="text-3xl font-bold text-slate-900">Alignment Matrix</h3>
+                <p class="text-slate-500 mt-2 text-lg">How my skills map directly to {{COMPANY_NAME}}'s needs</p>
+            </div>
+            <div class="hidden md:block">
+                <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-bold">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 mr-2"></i> 100% Match
+                </span>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200 overflow-hidden ring-1 ring-slate-900/5">
+            <!-- Desktop Header -->
+            <div class="hidden md:grid md:grid-cols-2 bg-slate-50 border-b border-slate-200 text-slate-500 p-4 font-semibold text-sm uppercase tracking-wider">
+              <div class="pl-4">What {{COMPANY_NAME}} Needs</div>
+              <div class="pl-4 text-indigo-600">What I Bring to the Table</div>
+            </div>
+
+            <!-- Rows Container -->
+            <div class="divide-y divide-slate-100">
+              
+              <!-- Row 1 -->
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">1</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_1}}</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                     <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                     </span>
+                     <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_1}}</p>
+                     </div>
+                  </div>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">2</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_2}}</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                     <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                     </span>
+                     <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_2}}</p>
+                     </div>
+                  </div>
+              </div>
+
+              <!-- Row 3 -->
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">3</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_3}}</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                     <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                     </span>
+                     <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_3}}</p>
+                     </div>
+                  </div>
+              </div>
+
+              <!-- Row 4 -->
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">4</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_4}}</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                     <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                     </span>
+                     <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_4}}</p>
+                     </div>
+                  </div>
+              </div>
+
+              <!-- Row 5 -->
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">5</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_5}}</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                     <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                     </span>
+                     <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_5}}</p>
+                     </div>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Conclusion & Meeting Invite -->
+        <section class="max-w-3xl mx-auto text-center space-y-10">
+            <div class="bg-indigo-50 rounded-2xl p-8 border border-indigo-100">
+                <p class="text-xl text-slate-700 leading-relaxed font-medium mb-8">
+                  {{CONCLUSION}}
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                   <button class="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-200 bg-indigo-600 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-700 hover:scale-105 shadow-xl shadow-indigo-200">
+                        <span>{{CTA_TEXT}}</span>
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                   </button>
+                   <button class="px-10 py-5 text-lg font-bold text-slate-600 transition-all duration-200 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-50 hover:text-indigo-600 hover:border-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200">
+                       View Resume
+                   </button>
+                </div>
+            </div>
+        </section>
+      </main>
+
+      <footer class="bg-slate-50 border-t border-slate-200 py-12 text-center text-slate-400 text-sm font-medium">
+        <p>&copy; 2024 {{FULL_NAME}}. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <!-- Initialize Icons -->
+    <script>
+      lucide.createIcons();
+    </script>
 </body>
 </html>
