@@ -1,257 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cover Letter Template</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal for {{COMPANY_NAME}}</title>
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
-      }
-      .gradient-text {
-        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .gradient-bg {
-        background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
-      }
+        :root {
+            --bg-color: #1e1e2f;
+            --card-bg: #2b2b40;
+            --accent: #6c5ce7;
+            --text-main: #ffffff;
+            --text-muted: #a0a0b0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        
+        body {
+            background: linear-gradient(135deg, #12121a 0%, #1e1e2f 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- STICKY HEADER --- */
+        .sticky-header {
+            position: fixed;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            background: rgba(30, 30, 47, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: top 0.3s ease-in-out;
+            z-index: 1000;
+        }
+        .sticky-header.visible { top: 0; }
+        .sticky-left { display: flex; align-items: center; gap: 20px; font-weight: 700; }
+        .sticky-linkedin { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 400; }
+        .sticky-linkedin:hover { color: #fff; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+        }
+        
+        .hero-content { max-width: 55%; }
+        
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subhead {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        /* --- CONTACT CARD --- */
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 380px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
+            margin-top: 25px;
+        }
+        .cta-button:hover { transform: translateY(-2px); background: #5a4ad1; }
+
+        /* --- STRATEGIC ALIGNMENT (Matrix) --- */
+        .section-container { max-width: 1100px; margin: 0 auto; padding: 100px 20px; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .col-header {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 800;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        /* Custom alignment for rows */
+        .matrix-row {
+            display: contents; /* Allows grid items to align strictly */
+        }
+
+        .matrix-item {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--accent);
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* --- CONCLUSION --- */
+        .conclusion {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(0,0,0,0.2);
+        }
+        .conclusion p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 40px;
+        }
+        .fun-fact { font-style: italic; opacity: 0.7; }
+        .fun-fact a { color: var(--accent); text-decoration: none; font-weight: bold; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; padding: 40px 20px; text-align: center; }
+            .hero-content { max-width: 100%; margin-bottom: 40px; }
+            h1 { font-size: 2.2rem; }
+            .matrix { grid-template-columns: 1fr; gap: 0; }
+            .contact-card { width: 100%; }
+        }
     </style>
 </head>
-<body class="bg-slate-50 min-h-screen py-0 md:py-12">
+<body>
 
-    <div class="bg-white max-w-5xl mx-auto shadow-2xl overflow-hidden font-sans text-slate-800 md:rounded-2xl border border-slate-100">
-      
-      <!-- Header Section -->
-      <header class="gradient-bg text-white p-8 md:p-14 relative overflow-hidden">
-        <!-- Decorative background elements -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500 rounded-full mix-blend-overlay filter blur-[64px] opacity-30 -translate-y-1/2 translate-x-1/4"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 bg-fuchsia-500 rounded-full mix-blend-overlay filter blur-[64px] opacity-20 translate-y-1/3 -translate-x-1/4"></div>
-
-        <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-          <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-indigo-100 text-xs font-semibold uppercase tracking-wider mb-4">
-              <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-              Open to Work
-            </div>
-            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-3 leading-tight">{{FULL_NAME}}</h1>
-            <p class="text-indigo-100 text-xl font-medium tracking-wide flex items-center gap-2">
-              {{JOB_TITLE}} <span class="text-indigo-400">|</span> {{COMPANY_NAME}}
-            </p>
-          </div>
-          
-          <div class="flex flex-col gap-3 text-sm text-indigo-100/90 bg-white/5 p-5 rounded-xl backdrop-blur-sm border border-white/10 min-w-[280px]">
-            <div class="flex items-center gap-3">
-              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
-                <i data-lucide="mail" class="w-4 h-4"></i>
-              </div>
-              <a href="mailto:{{EMAIL_ADDRESS}}" class="hover:text-white transition-colors font-medium break-all">{{EMAIL_ADDRESS}}</a>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
-                <i data-lucide="phone" class="w-4 h-4"></i>
-              </div>
-              <a href="tel:{{PHONE_NUMBER}}" class="hover:text-white transition-colors font-medium">{{PHONE_NUMBER}}</a>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
-                <i data-lucide="map-pin" class="w-4 h-4"></i>
-              </div>
-              <span class="font-medium">{{CITY_STATE}}</span>
-            </div>
-            <div class="mt-2 pt-4 border-t border-white/10 w-full">
-              <a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-white/10 hover:bg-[#0077b5] border border-white/10 hover:border-[#0077b5] text-white font-semibold transition-all duration-300">
-                <span>LinkedIn Profile</span>
-              </a>
-            </div>
-          </div>
+    <div id="stickyHeader" class="sticky-header">
+        <div class="sticky-left">
+            <span>{{FULL_NAME}}</span>
+            <a href="{{LINKEDIN_URL}}" target="_blank" class="sticky-linkedin">LinkedIn</a>
         </div>
-      </header>
-
-      <main class="p-8 md:p-16 space-y-16">
-        <!-- Hero / Intro Section -->
-        <section class="max-w-4xl mx-auto text-center space-y-6">
-            <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
-                Why I am the missing piece for your <span class="gradient-text">{{JOB_TITLE}}</span> role.
-            </h2>
-            <div class="h-1 w-24 bg-indigo-600 mx-auto rounded-full opacity-20"></div>
-        </section>
-
-        <!-- Executive Summary -->
-        <section class="bg-gradient-to-r from-slate-50 to-white border border-slate-200 p-8 md:p-10 rounded-2xl shadow-sm relative overflow-hidden">
-          <div class="absolute top-0 left-0 w-2 h-full bg-indigo-600"></div>
-          <div class="flex items-start gap-4">
-             <i data-lucide="quote" class="w-8 h-8 text-indigo-200 fill-indigo-100 flex-shrink-0"></i>
-             <div>
-                <h3 class="text-lg font-bold text-slate-900 uppercase tracking-wide mb-3">Executive Summary</h3>
-                <p class="text-lg md:text-xl text-slate-700 leading-relaxed font-medium">{{SHORT_SUMMARY}}</p>
-             </div>
-          </div>
-        </section>
-
-        <!-- The "Why Me" Table -->
-        <section>
-          <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
-            <div>
-                <h3 class="text-3xl font-bold text-slate-900">Alignment Matrix</h3>
-                <p class="text-slate-500 mt-2 text-lg">How my skills map directly to {{COMPANY_NAME}}'s needs</p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200 overflow-hidden ring-1 ring-slate-900/5">
-            <!-- Desktop Header -->
-            <div class="hidden md:grid md:grid-cols-2 bg-slate-50 border-b border-slate-200 text-slate-500 p-4 font-semibold text-sm uppercase tracking-wider">
-              <div class="pl-4">What {{COMPANY_NAME}} Needs</div>
-              <div class="pl-4 text-indigo-600">What I Bring to the Table</div>
-            </div>
-
-            <!-- Rows Container -->
-            <div class="divide-y divide-slate-100">
-              
-              <!-- Row 1 -->
-              <div class="flex flex-col md:grid md:grid-cols-2 group">
-                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
-                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">1</span>
-                    <div>
-                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
-                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_1}}</p>
-                    </div>
-                  </div>
-                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
-                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                     <span class="flex-shrink-0">
-                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
-                     </span>
-                     <div>
-                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
-                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_1}}</p>
-                     </div>
-                  </div>
-              </div>
-
-              <!-- Row 2 -->
-              <div class="flex flex-col md:grid md:grid-cols-2 group">
-                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
-                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">2</span>
-                    <div>
-                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
-                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_2}}</p>
-                    </div>
-                  </div>
-                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
-                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                     <span class="flex-shrink-0">
-                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
-                     </span>
-                     <div>
-                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
-                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_2}}</p>
-                     </div>
-                  </div>
-              </div>
-
-              <!-- Row 3 -->
-              <div class="flex flex-col md:grid md:grid-cols-2 group">
-                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
-                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">3</span>
-                    <div>
-                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
-                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_3}}</p>
-                    </div>
-                  </div>
-                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
-                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                     <span class="flex-shrink-0">
-                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
-                     </span>
-                     <div>
-                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
-                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_3}}</p>
-                     </div>
-                  </div>
-              </div>
-
-              <!-- Row 4 -->
-              <div class="flex flex-col md:grid md:grid-cols-2 group">
-                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
-                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">4</span>
-                    <div>
-                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
-                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_4}}</p>
-                    </div>
-                  </div>
-                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
-                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                     <span class="flex-shrink-0">
-                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
-                     </span>
-                     <div>
-                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
-                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_4}}</p>
-                     </div>
-                  </div>
-              </div>
-
-              <!-- Row 5 -->
-              <div class="flex flex-col md:grid md:grid-cols-2 group">
-                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
-                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">5</span>
-                    <div>
-                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
-                        <p class="text-slate-700 font-medium leading-relaxed">{{REQUIREMENT_5}}</p>
-                    </div>
-                  </div>
-                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
-                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                     <span class="flex-shrink-0">
-                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
-                     </span>
-                     <div>
-                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
-                        <p class="text-slate-900 font-semibold leading-relaxed">{{MATCH_5}}</p>
-                     </div>
-                  </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- Conclusion & Meeting Invite -->
-        <section class="max-w-3xl mx-auto text-center space-y-10">
-            <div class="bg-indigo-50 rounded-2xl p-8 border border-indigo-100">
-                <p class="text-xl text-slate-700 leading-relaxed font-medium mb-8">
-                  {{CONCLUSION}}
-                </p>
-
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                   <a href="mailto:{{EMAIL_ADDRESS}}" class="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-200 bg-indigo-600 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-700 hover:scale-105 shadow-xl shadow-indigo-200">
-                        <span>Schedule a meeting</span>
-                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-                   </a>
-                   <a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener noreferrer" class="px-10 py-5 text-lg font-bold text-slate-600 transition-all duration-200 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-50 hover:text-indigo-600 hover:border-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-200">
-                       View Profile
-                   </a>
-                </div>
-            </div>
-        </section>
-      </main>
-
-      <footer class="bg-slate-50 border-t border-slate-200 py-12 text-center text-slate-400 text-sm font-medium">
-        <p>&copy; 2026 {{FULL_NAME}}. All rights reserved.</p>
-      </footer>
+        <div>
+            <a href="{{CTA_LINK}}" class="cta-button" style="padding: 10px 25px; margin: 0; font-size: 0.9rem;">{{CTA_TEXT}}</a>
+        </div>
     </div>
 
-    <!-- Initialize Icons -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Driving the next phase of growth for {{COMPANY_NAME}} as your {{JOB_TITLE}}.</h1>
+            <div class="subhead">Growth • AI • Data</div>
+            <p style="color:var(--text-muted); font-size: 1.1rem; max-width: 90%;">
+                {{SHORT_SUMMARY}}
+            </p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-row">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>[Email on Resume]</span>
+            </div>
+            <div class="contact-row">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Montreal, Canada</span>
+            </div>
+            <a href="{{LINKEDIN_URL}}" target="_blank" style="display:block; color:var(--accent); text-decoration:none; margin-bottom: 5px;">View LinkedIn Profile</a>
+            
+            <a href="{{CTA_LINK}}" class="cta-button">{{CTA_TEXT}}</a>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <h2 class="section-title">Strategic Alignment</h2>
+        
+        <div class="matrix">
+            <div>
+                <div class="col-header">Key Strategic Priorities</div>
+                <div class="matrix-item">{{REQUIREMENT_1}}</div>
+                <div class="matrix-item">{{REQUIREMENT_2}}</div>
+                <div class="matrix-item">{{REQUIREMENT_3}}</div>
+                <div class="matrix-item">{{REQUIREMENT_4}}</div>
+                <div class="matrix-item">{{REQUIREMENT_5}}</div>
+            </div>
+
+            <div>
+                <div class="col-header">Proven Impact & Experience</div>
+                <p style="color:#666; font-size:0.9rem; margin-bottom: 25px; margin-top:-15px;">How my skills map directly to the job's needs:</p>
+                
+                <div class="matrix-item">{{MATCH_1}}</div>
+                <div class="matrix-item">{{MATCH_2}}</div>
+                <div class="matrix-item">{{MATCH_3}}</div>
+                <div class="matrix-item">{{MATCH_4}}</div>
+                <div class="matrix-item">{{MATCH_5}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="conclusion">
+        <p>{{CONCLUSION}}</p>
+        <a href="{{CTA_LINK}}" class="cta-button" style="display:inline-block; width:auto; padding: 15px 40px;">{{CTA_TEXT}}</a>
+        
+        <div class="footer">
+            <p class="fun-fact">
+                Fun fact: this page was generated in one click. Curious how I engineered the system in less than 24h? 
+                <a href="{{CTA_LINK}}">Click here!</a>
+            </p>
+        </div>
+    </div>
+
     <script>
-      lucide.createIcons();
+        // Sticky Header Script
+        const header = document.getElementById("stickyHeader");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                header.classList.add("visible");
+            } else {
+                header.classList.remove("visible");
+            }
+        });
     </script>
 </body>
 </html>
