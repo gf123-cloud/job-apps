@@ -30,7 +30,7 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col items-center">
 
-  <header class="w-full max-w-4xl px-6 pt-16 pb-12 flex flex-col items-center text-center space-y-8">
+    <header class="w-full max-w-4xl px-6 pt-16 pb-12 flex flex-col items-center text-center space-y-8">
         
         <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-[#695EE6] shadow-2xl">
             <img src="images/profile.png" alt="Logo" class="w-full h-full object-cover"> 
@@ -39,7 +39,7 @@
         <div class="space-y-2">
             <h1 class="text-5xl md:text-6xl font-extrabold gradient-text tracking-tight">Gael Fleissner</h1>
             <h2 class="text-xl md:text-2xl text-gray-300 font-light">
-                Growth Marketing Consultant <span class="underline decoration-[#FF7A7A] underline-offset-4">for SaaS startups</span>
+                Growth Marketing Consultant <span class="underline decoration-[#FF7A7A] underline-offset-4">for SaaS & AI startups</span>
             </h2>
         </div>
 
@@ -137,28 +137,25 @@
 
     <div class="w-full h-px bg-gradient-to-r from-transparent via-[#695EE6] to-transparent opacity-30 my-12"></div>
 
-    <section id="contact" class="w-full max-w-3xl px-6 py-16 text-center space-y-8 bg-[#2F3340] rounded-2xl border border-gray-700 shadow-2xl mb-20 mx-4">
-        <span class="text-xs uppercase tracking-[0.2em] text-[#9892E0] font-bold">Complimentary Kickoff Session</span>
-        <h3 class="text-3xl md:text-4xl font-bold gradient-text">Ready to scale? Let's connect.</h3>
+    <section id="contact" class="w-full max-w-3xl px-6 py-16 text-center space-y-12 bg-[#2F3340] rounded-2xl border border-gray-700 shadow-2xl mb-20 mx-4">
+        <div>
+            <span class="text-xs uppercase tracking-[0.2em] text-[#9892E0] font-bold">Complimentary Kickoff Session</span>
+            <h3 class="text-3xl md:text-4xl font-bold gradient-text mt-4">Ready to scale? Let's connect.</h3>
+        </div>
         
-        <div class="flex justify-center">
-            <a href="https://calendly.com/gael-fleissner/let-s-connect" target="_blank" class="btn-glow flex items-center gap-2 px-8 py-4 rounded-full bg-[#3E4352] text-white font-medium hover:bg-[#4a5061]">
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+            
+            <a href="https://calendly.com/gael-fleissner/let-s-connect" target="_blank" class="btn-glow flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#3E4352] text-white font-medium hover:bg-[#4a5061] min-w-[200px]">
                 <i data-lucide="video" class="w-5 h-5 text-[#FF7A7A]"></i>
                 <span>Book a Meeting</span>
             </a>
+
+            <a href="mailto:gael.fleissner.contact@gmail.com" class="btn-glow flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#3E4352] text-white font-medium hover:bg-[#4a5061] min-w-[200px]">
+                <i data-lucide="mail" class="w-5 h-5 text-[#FF7A7A]"></i>
+                <span>Send Email</span>
+            </a>
+
         </div>
-
-        <p class="text-gray-400 text-sm">Or send me a message directly:</p>
-
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 max-w-md mx-auto text-left">
-            <input type="text" name="name" placeholder="Name" class="w-full p-4 rounded-full bg-[#3E4352] border border-[#695EE6] text-white focus:outline-none focus:ring-2 focus:ring-[#FF7A7A]" required>
-            <input type="text" name="company" placeholder="Company Name" class="w-full p-4 rounded-full bg-[#3E4352] border border-[#695EE6] text-white focus:outline-none focus:ring-2 focus:ring-[#FF7A7A]">
-            <input type="email" name="email" placeholder="Email" class="w-full p-4 rounded-full bg-[#3E4352] border border-[#695EE6] text-white focus:outline-none focus:ring-2 focus:ring-[#FF7A7A]" required>
-            <textarea name="message" rows="4" placeholder="Message" class="w-full p-4 rounded-2xl bg-[#3E4352] border border-[#695EE6] text-white focus:outline-none focus:ring-2 focus:ring-[#FF7A7A]" required></textarea>
-            <button type="submit" class="w-full btn-glow py-4 rounded-full bg-[#3E4352] text-[#FF7A7A] font-bold uppercase tracking-wider hover:bg-[#4a5061]">
-                Send Message
-            </button>
-        </form>
     </section>
 
     <footer class="w-full py-12 text-center space-y-6 bg-[#2F3340] border-t border-gray-800">
