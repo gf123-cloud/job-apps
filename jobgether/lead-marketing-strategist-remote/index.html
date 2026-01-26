@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/profile.png" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proposal for Jobgether</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+      }
+      /* Sticky Header Transition */
+      #sticky-header {
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Smooth spring-like motion */
+          opacity: 0;
+          transform: translateY(-20px);
+      }
+      #sticky-header.visible {
+          opacity: 1;
+          transform: translateY(0);
+      }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen py-0 md:py-12 relative">
+
+    <div id="sticky-header" class="fixed top-4 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+        <div class="bg-white/90 backdrop-blur-md shadow-xl border border-white/20 text-slate-800 w-full max-w-5xl rounded-xl px-6 py-3 flex justify-between items-center pointer-events-auto">
+            <div class="flex flex-col justify-center">
+                <span class="font-bold text-xl leading-none">Gael Fleissner</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-slate-500 font-medium text-sm hidden sm:block">Ready to scale?</span>
+                <a href="https://calendly.com/gael-fleissner/let-s-connect" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 bg-indigo-600 text-white text-sm font-bold rounded-lg hover:bg-indigo-700 transition-colors shadow-md shadow-indigo-200">
+                    Schedule a meeting
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white max-w-5xl mx-auto shadow-2xl overflow-hidden font-sans text-slate-800 md:rounded-2xl border border-slate-100">
+      
+      <header class="gradient-bg text-white p-8 md:p-14 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500 rounded-full mix-blend-overlay filter blur-[64px] opacity-30 -translate-y-1/2 translate-x-1/4"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-fuchsia-500 rounded-full mix-blend-overlay filter blur-[64px] opacity-20 translate-y-1/3 -translate-x-1/4"></div>
+
+        <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          <div>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-5 leading-none">Gael Fleissner</h1>
+            <p class="text-indigo-100 text-xl font-medium flex items-center gap-2 opacity-90 leading-none">
+              Growth &#124; AI &#124; Data
+            </p>
+          </div>
+          
+          <div class="flex flex-col gap-3 text-sm text-indigo-100/90 bg-white/5 p-5 rounded-xl backdrop-blur-sm border border-white/10 min-w-[280px]">
+            <div class="flex items-center gap-3">
+              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <a href="mailto:gael.fleissner.contact@gmail.com" class="hover:text-white transition-colors font-medium break-all">gael.fleissner.contact@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <a href="tel:+15148671001" class="hover:text-white transition-colors font-medium">+1 514-867-1001</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="p-1.5 bg-indigo-500/30 rounded-md text-white">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <span class="font-medium">Montreal, Canada</span>
+            </div>
+            <div class="mt-2 pt-4 border-t border-white/10 w-full">
+              <a href="https://www.linkedin.com/in/gaelfleissner/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-white/10 hover:bg-[#0077b5] border border-white/10 hover:border-[#0077b5] text-white font-semibold transition-all duration-300">
+                <span>LinkedIn Profile</span>
+              </a>
+              <a href="https://calendly.com/gael-fleissner/let-s-connect" target="_blank" rel="noopener noreferrer" class="mt-2 group flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-indigo-500 hover:bg-indigo-400 border border-transparent text-white font-semibold transition-all duration-300">
+                <span>Schedule a meeting</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="p-8 md:p-16 space-y-16">
+        <section class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">
+                Driving the next phase of growth for <span class="gradient-text">Jobgether</span> as your <span class="gradient-text">Lead Marketing Strategist (Remote)</span>.
+            </h2>
+            <div class="h-1 w-24 bg-indigo-600 mx-auto rounded-full opacity-20"></div>
+        </section>
+
+        <section class="bg-gradient-to-r from-slate-50 to-white border border-slate-200 p-8 md:p-10 rounded-2xl shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-2 h-full bg-indigo-600"></div>
+          <div class="flex items-start gap-4">
+             <i data-lucide="quote" class="w-8 h-8 text-indigo-200 fill-indigo-100 flex-shrink-0"></i>
+             <div>
+                <p class="text-lg md:text-xl text-slate-700 leading-relaxed font-medium">As a Head of Marketing, I've engineered high-performance revenue engines for B2B SaaS scale-ups, driving a 20X increase in sales and doubling ICP acquisition through strategic GTM and AI-first initiatives. I excel at bridging the gap between technical infrastructure and market expansion, leveraging AI-first workflows to multiply team output and establish thought leadership in competitive, remote-first environments.</p>
+             </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
+            <div>
+                <h3 class="text-3xl font-bold text-slate-900">Strategic Alignment</h3>
+                <p class="text-slate-500 mt-2 text-lg">Where my experience meets your specific needs.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200 overflow-hidden ring-1 ring-slate-900/5">
+            <div class="hidden md:grid md:grid-cols-2 bg-slate-50 border-b border-slate-200 text-slate-500 p-4 font-semibold text-sm uppercase tracking-wider">
+              <div class="pl-4">Key Strategic Priorities</div>
+              <div class="pl-4 text-indigo-600">Proven Impact & Experience</div>
+            </div>
+
+            <div class="divide-y divide-slate-100">
+              
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">1</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">8+ years of B2B SaaS marketing experience with proven measurable growth.</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                      <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                      </span>
+                      <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">Growth Marketing Leader with 10+ years of experience engineering high-performance revenue engines for B2B SaaS and AI scale-ups, driving a 20X increase in sales and doubling ICP acquisition volume.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">2</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">In-depth experience with API products and platform marketing.</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                      <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                      </span>
+                      <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">As Digital & Product Marketing Manager at Talent.com, I served as Agile Product Owner for marketing tools, driving UX/UI enhancements and user acquisition at scale. My experience founding an AI-first creator agency also involved deep engagement with social media platforms and their underlying infrastructure, relevant to API products.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">3</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">Expert-level understanding of social media marketing, especially YouTube and Reddit.</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                      <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                      </span>
+                      <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">My 'Performance Marketing & Distribution' competencies include 'Social Media Strategy' and 'Influencer and Creator Partnerships.' As Founder of Australia Experiences, I built a network of 300+ influencers for an AI-first creator agency, demonstrating expert-level social media engagement and growth.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">4</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">Take full ownership of the marketing funnel, from brand awareness to lead generation, driving significant growth in organic traffic, MQLs, and community engagement.</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                      <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                      </span>
+                      <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">I have full-funnel GTM expertise, demonstrated by building the entire marketing function at Sadie AI, driving a 20X increase in sales, and establishing closed-loop reporting and lead scoring at Lightspeed Commerce, resulting in a 5X increase in ROAS and 1.5x growth in SEO leads.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="flex flex-col md:grid md:grid-cols-2 group">
+                  <div class="p-6 md:pr-10 flex items-start gap-4 bg-white transition-colors group-hover:bg-slate-50/50">
+                    <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center font-bold text-sm">5</span>
+                    <div>
+                        <div class="md:hidden text-xs font-bold text-slate-400 uppercase tracking-wide mb-1">Requirement</div>
+                        <p class="text-slate-700 font-medium leading-relaxed">Structured, analytical, and data-driven mindset.</p>
+                    </div>
+                  </div>
+                  <div class="p-6 md:pl-10 flex items-start gap-4 bg-indigo-50/20 md:border-l border-slate-100 relative overflow-hidden transition-colors group-hover:bg-indigo-50/40">
+                      <div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <span class="flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-8 h-8 text-green-500 fill-green-50"></i>
+                      </span>
+                      <div>
+                        <div class="md:hidden text-xs font-bold text-indigo-600 uppercase tracking-wide mb-1">My Fit</div>
+                        <p class="text-slate-900 font-semibold leading-relaxed">My 'Data, AI & RevOps' competencies include Predictive Analytics, SQL, BigQuery, GA4, and AI-Driven Lead Scoring. I established closed-loop reporting and lead scoring systems at Lightspeed Commerce, demonstrating a deeply structured, analytical, and data-driven approach to growth.</p>
+                      </div>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="max-w-3xl mx-auto text-center space-y-10 pb-8">
+            <div class="bg-indigo-50 rounded-2xl p-8 border border-indigo-100">
+                <p class="text-xl text-slate-700 leading-relaxed font-medium mb-8">
+                  If you are looking for an entrepreneurial leader who combines data-driven strategy with AI innovation to drive the next phase of growth at Jobgether, let's talk!
+                </p>
+
+                <div class="flex flex-col items-center justify-center gap-4">
+                   <a href="https://calendly.com/gael-fleissner/let-s-connect" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white transition-all duration-200 bg-indigo-600 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 hover:bg-indigo-700 hover:scale-105 shadow-xl shadow-indigo-200">
+                        <span>Schedule a meeting</span>
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                   </a>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-indigo-200/60">
+                    <p class="text-sm text-indigo-900/70 italic">Fun fact: this page was generated in one click. Curious how I engineered the system in less than 24h? <a href="https://calendly.com/gael-fleissner/let-s-connect" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-bold hover:underline">Click here!</a></p>
+                </div>
+            </div>
+        </section>
+      </main>
+
+      <footer class="bg-slate-50 border-t border-slate-200 py-8 text-center text-slate-400 text-sm font-medium">
+        <p>&copy; 2026 Gael Fleissner. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script>
+      lucide.createIcons();
+
+      // Sticky Header Logic
+      const header = document.getElementById('sticky-header');
+      window.addEventListener('scroll', () => {
+          // Show sticky header after scrolling past the main header (approx 400px)
+          if (window.scrollY > 400) {
+              header.classList.add('visible');
+          } else {
+              header.classList.remove('visible');
+          }
+      });
+    </script>
+</body>
+</html>
